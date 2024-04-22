@@ -763,7 +763,32 @@ namespace LoopStructure
 
             Console.ReadKey();
         }
-        //Bài 30
+        //Bài 30: Số đối xứng, hay còn gọi là số Palindrome, là các số dù đọc theo chiều xuôi hay chiều ngược thì đều giống nhau, ví dụ: 121, 4224, ...
+        private static void BaiTap30()
+        {
+            int num, r, sum = 0, t;
+
+            Console.Write("\n");
+            Console.Write("Kiem tra so doi xung trong C# | Kiem tra so palindrome trong C#:\n");
+            Console.Write("-----------------------------");
+            Console.Write("\n\n");
+
+            Console.Write("Nhap mot so bat ky: ");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            for (t = num; num != 0; num = num / 10)
+            {
+                r = num % 10;
+                sum = sum * 10 + r;
+            }
+            if (t == sum)
+                Console.Write("So {0} la so doi xung (so palindrome).\n", t);
+            else
+                Console.Write("So {0} khong phai la so doi xung (so palindrome).\n", t);
+
+
+            Console.ReadKey();
+        }
         static void Main(string[] args)
         {
             BaiTap29();
