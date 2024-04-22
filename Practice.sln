@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringStructure", "StringSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopStructure", "LoopStructure\LoopStructure.csproj", "{A8D731AA-6934-4F0D-A1AF-2E3E9DDBBA3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversion", "Conversion\Conversion.csproj", "{5F2597E6-EA93-4CB4-B3C0-3052596D63E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConvert", "DataConvert\DataConvert.csproj", "{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{A8D731AA-6934-4F0D-A1AF-2E3E9DDBBA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8D731AA-6934-4F0D-A1AF-2E3E9DDBBA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8D731AA-6934-4F0D-A1AF-2E3E9DDBBA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F2597E6-EA93-4CB4-B3C0-3052596D63E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F2597E6-EA93-4CB4-B3C0-3052596D63E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F2597E6-EA93-4CB4-B3C0-3052596D63E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F2597E6-EA93-4CB4-B3C0-3052596D63E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

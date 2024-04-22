@@ -789,9 +789,273 @@ namespace LoopStructure
 
             Console.ReadKey();
         }
+        //Bài 31: Viết chương trình C# để vẽ tam giác chữ cái với số chữ cái (nhỏ hơn 26)
+        private static void BaiTap31()
+        {
+            int i, j;
+            char alph = 'A';
+            int n;
+            int ctr = 1;
+
+            Console.Write("\n");
+            Console.Write("Ve tam giac chu cai trong C#:\n");
+            Console.Write("----------------------------");
+            Console.Write("\n\n");
+
+            Console.Write("Nhap so chu cai (nho hon 26): ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            for (i = 1; i <= n; i++)
+            {
+                for (j = 0; j <= (ctr / 2); j++)
+                {
+                    Console.Write("{0} ", alph++);
+                }
+                alph--;
+                alph--;
+
+                for (j = 0; j < (ctr / 2); j++)
+                {
+                    Console.Write("{0} ", alph--);
+                }
+                ctr = ctr + 2;
+                alph = 'A';
+                Console.Write("\n");
+            }
+            Console.ReadKey();
+        }
+        //Bài 32: Viết chương trình C# để tìm ước số chung lớn nhất của hai số được nhập từ bàn phím
+        private static void BaiTap32()
+        {
+            int i, n1, n2, j, uscln = 1;
+            Console.Write("\n");
+            Console.Write("Tim uoc so chung lon nhat trong C#:\n");
+            Console.Write("-----------------------------------");
+            Console.Write("\n\n");
+
+            Console.Write("Nhap so thu nhat: ");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap so thu hai: ");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            j = (n1 < n2) ? n1 : n2;
+            for (i = 1; i <= j; i++)
+            {
+                if (n1 % i == 0 && n2 % i == 0)
+                {
+                    uscln = i;
+                }
+            }
+            Console.Write("\nUSCLN cua {0} va {1} la: {2}\n\n", n1, n2, uscln);
+
+            Console.ReadKey();
+        }
+        //Bài 33: Viết chương trình C# để tìm bội số chung nhỏ nhất của hai số bất kỳ được nhập từ bàn phím bằng cách sử dụng ước số chung lớn nhất (USCLN) của hai số đó.
+        private static void BaiTap33()
+        {
+            int i, n1, n2, j, hcf = 1, bscnn;
+            Console.Write("\n");
+            Console.Write("Tim boi so chung nho nhat trong C# (su dung USCLN):\n");
+            Console.Write("--------------------------------------------------");
+            Console.Write("\n\n");
+
+
+            Console.Write("Nhap so thu nhat: ");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap so thu hai: ");
+            n2 = Convert.ToInt32(Console.ReadLine());
+
+            j = (n1 < n2) ? n1 : n2;
+
+            for (i = 1; i <= j; i++)
+            {
+
+                if (n1 % i == 0 && n2 % i == 0)
+                {
+                    hcf = i;
+                }
+            }
+            /* chung ta biet rang: tich cua uoc so chung lon nhat va boi 
+            so chung nho nhat thi bang tich cua hai so.*/
+            bscnn = (n1 * n2) / hcf;
+
+            Console.Write("\nBSCNN cua {0} va {1} la: {2}\n\n", n1, n2, bscnn);
+
+            Console.ReadKey();
+        }
+        //Bài 34: Viết chương trình C# để tìm bội số chung nhỏ nhất của hai số bất kỳ được nhập từ bàn phím (không sử dụng USCLN).
+        private static void BaiTap34()
+        {
+            int i, n1, n2, max, bscnn = 1;
+            Console.Write("\n");
+            Console.Write("Tim boi so chung nho nhat trong C# (khong su dung USCLN):\n");
+            Console.Write("-------------------------------------------------------");
+            Console.Write("\n\n");
+            Console.Write("Nhap so thu nhat: ");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap so thu hai: ");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            max = (n1 > n2) ? n1 : n2;
+            for (i = max; ; i += max)
+            {
+                if (i % n1 == 0 && i % n2 == 0)
+                {
+                    bscnn = i;
+                    break;
+                }
+            }
+            Console.Write("\nBSCNN cua {0} va {1} = {2}\n\n", n1, n2, bscnn);
+
+            Console.ReadKey();
+        }
+        //Bài 35: Strong Number là số có tổng giai thừa của các chữ số bằng chính số ban đầu.
+        private static void BaiTap35()
+        {
+            int i, n, n1, s1 = 0, j;
+            int fact;
+
+            Console.Write("\n");
+            Console.Write("Kiem tra Strong Number trong C#:\n");
+            Console.Write("------------------------------");
+            Console.Write("\n\n");
+
+            Console.Write("Nhap so bat ky de kiem tra: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            n1 = n;
+
+            for (j = n; j > 0; j = j / 10)
+            {
+
+                fact = 1;
+                for (i = 1; i <= j % 10; i++)
+                {
+                    fact = fact * i;
+                }
+                s1 = s1 + fact;
+
+            }
+
+            if (s1 == n1)
+            {
+                Console.Write("\nSo {0} la Strong number.\n\n", n1);
+            }
+            else
+            {
+                Console.Write("\nSo {0} khong phai la Strong number.\n\n", n1);
+            }
+
+            Console.ReadKey();
+        }
+        //Bài 36: Viết chương trình C# để tìm Strong Number trong một dãy đã cho. Strong Number là số có tổng giai thừa của các chữ số bằng chính số ban đầu
+        private static void BaiTap36()
+        {
+            int i, n1, s1 = 0, j, k, en, sn;
+            int fact;
+
+            Console.Write("\n");
+            Console.Write("Tim Strong Number trong C#:\n");
+            Console.Write("--------------------------");
+            Console.Write("\n\n");
+
+            Console.Write("Nhap so bat dau cua day: ");
+            sn = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Nhap so ket thuc cua day: ");
+            en = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n\nCac Strong Number la:\n");
+
+            for (k = sn; k <= en; k++)
+            {
+                n1 = k;
+                s1 = 0;
+
+                for (j = k; j > 0; j = j / 10)
+                {
+
+                    fact = 1;
+                    for (i = 1; i <= j % 10; i++)
+                    {
+                        fact = fact * i;
+                    }
+                    s1 = s1 + fact;
+                }
+
+                if (s1 == n1)
+
+                    Console.Write("{0}  ", n1);
+            }
+            Console.Write("\n\n");
+
+            Console.ReadKey();
+        }
+        //Bài 37: Viết chương trình C# để nhập một số và kiểm tra xem số đó có thể biểu diễn bằng tổng của hai số nguyên tố không
+        private static void BaiTap37()
+        {
+            int n, i, flg1 = 1, flg2 = 1, flg3 = 0, j;
+
+            Console.Write("\n");
+            Console.Write("Chuong trinh C# de kiem tra xem mot so co the bieu dien bang\n");
+            Console.Write("          tong cua hai so nguyen to khong:\n");
+            Console.Write("---------------------------------------------");
+            Console.Write("\n\n");
+
+
+            Console.Write("Nhap mot so duong: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            for (i = 3; i <= n / 2; i++)
+            {
+                /*---------- Kiem tra so nguyen to---------------*/
+                flg1 = 1;
+                flg2 = 1;
+                for (j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    { flg1 = 0; j = i; }
+                }
+                for (j = 2; j < n - i; j++)
+                {
+                    if ((n - i) % j == 0)
+                    { flg2 = 0; j = n - i; }
+                }
+                if (flg1 == 1 && flg2 == 1)
+                {
+                    Console.Write("{0} =  {1} + {2}  \n", n, i, n - i);
+                    flg3 = 1;
+                }
+            }
+            if (flg3 == 0)
+            {
+                Console.Write("\nSo {0} khong the bieu dien bang tong cua hai so nguyen to.\n\n", n);
+            }
+
+            Console.ReadKey();
+        }
+        //Bài 38: Viết chương trình C# để nhập một chuỗi bất kỳ, sau đó in chuỗi theo chiều đảo ngược
+        private static void BaiTap38()
+        {
+            string str, str1 = "";
+            int i, l;
+
+            Console.Write("\n");
+            Console.Write("In chuoi theo chieu dao nguoc trong C#:\n");
+            Console.Write("-------------------------------------");
+            Console.Write("\n\n");
+
+            Console.Write("Nhap mot chuoi: ");
+            str = Console.ReadLine();
+
+            l = str.Length - 1;
+            for (i = l; i >= 0; i--)
+            {
+                str1 = str1 + str[i];
+            }
+
+            Console.WriteLine("Chuoi dao nguoc cua chuoi ban dau la: {0}", str1);
+            Console.Write("\n");
+
+            Console.ReadKey();
+        }
         static void Main(string[] args)
         {
-            BaiTap29();
+            BaiTap15();
         }
     }
 }
