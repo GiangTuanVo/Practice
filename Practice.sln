@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversion", "Conversion\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConvert", "DataConvert\DataConvert.csproj", "{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayOneWay", "ArrayOneWay\ArrayOneWay.csproj", "{D05AC8B0-C52D-4136-BDF6-5803C16E1372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayTwoWay", "ArrayTwoWay\ArrayTwoWay.csproj", "{51AEF4FE-52B7-46CB-A918-A50A6414BD75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAD35AC3-C672-4CA3-BA05-A300113F3CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D05AC8B0-C52D-4136-BDF6-5803C16E1372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D05AC8B0-C52D-4136-BDF6-5803C16E1372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D05AC8B0-C52D-4136-BDF6-5803C16E1372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D05AC8B0-C52D-4136-BDF6-5803C16E1372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51AEF4FE-52B7-46CB-A918-A50A6414BD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51AEF4FE-52B7-46CB-A918-A50A6414BD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51AEF4FE-52B7-46CB-A918-A50A6414BD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51AEF4FE-52B7-46CB-A918-A50A6414BD75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
